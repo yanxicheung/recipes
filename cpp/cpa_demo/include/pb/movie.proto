@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package movie;
+
+message Message
+{
+    oneof Messages
+    {
+         MovieInfoRequest  movie_info_request  = 1;
+         MovieInfoResponse movie_info_response = 2;
+    }
+}
+
+message Score
+{
+    int32 value = 1;
+    string comment = 2;
+}
+
+enum MovieType
+{
+    humor = 0;
+    science = 1;
+    love = 2;
+    other = 3;
+}
+
+message BasicInfo
+{
+    MovieType movie_type = 1;
+    repeated string  directors = 2;
+}
+
+message MovieInfoRequest
+{
+    string name = 1;
+}
+
+message MovieInfoResponse
+{
+    string name = 1;
+    BasicInfo basic_info = 2;
+    repeated Score score_items = 3;
+}
