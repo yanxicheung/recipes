@@ -60,13 +60,29 @@ public:
 		++CAsgn;
 		if (this != &str)
 		{
-			if (_data) delete []_data;
+			if (_data) delete []_data; // 改变了原实例的状态
 			_len = str._len;
 			_init_data(str._data); // copy
 		}
 		return *this;
 	}
-
+	// 以下考虑了上面解法在内存不足时导致new 内存失败抛出异常的问题
+/*
+	MyString& operator=(const MyString& str)
+	{
+		++CAsgn;
+		if (this != &str)
+		{
+			MyString strTmp(str);
+			char* pTmp = _data;
+			_data = strTmp._data;
+			_len = strTmp._len;
+			strTmp._data = pTmp;
+		}
+		return *this;
+	}
+*/
+	
 	MyString& operator=(MyString&& str) NOEXCEPT{
 		++MAsgn;
 		if (this != &str)
