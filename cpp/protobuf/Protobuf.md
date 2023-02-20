@@ -1,8 +1,12 @@
 # 序列化原理
 
+todo
+
 
 
 # 反射
+
+todo
 
 
 
@@ -91,14 +95,24 @@ protobuf中的oneof类似与C++中的联合体类型相似，所有的字段共�
 
 ### any
 
+使用Any Message Type时，需要import文件google/protobuf/any.proto。
+
 
 
 ## 实践
 
 示例基于`protobuf 3.13.0`版本
 
+10-simple  ： 简单用法
 
+20-oneof ：oneof基本用法
+
+30-any： any基本用法
+
+40-createObjByMsgType： 依靠反射，通过消息名称创建对象
 
 # ref
 
-4. [C++序列化工具最佳实践](https://www.jianshu.com/p/50065ff82be3)
+1. [C++序列化工具最佳实践](https://www.jianshu.com/p/50065ff82be3)
+2. [一种自动反射消息类型的 Google Protobuf 网络传输方案](https://blog.csdn.net/Solstice/article/details/6300108)
+3. [muduo库中实现Protbuf编码器与消息分发器](https://blog.csdn.net/m0_61705102/article/details/128043209)

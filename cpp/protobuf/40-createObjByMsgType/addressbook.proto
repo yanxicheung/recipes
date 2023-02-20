@@ -1,0 +1,28 @@
+syntax = "proto3";
+package daniel.tutorial;  // 对应C++命名空间;
+
+message Person {
+    BasicInfo basicInfo = 1;
+
+    enum PhoneType {
+        MOBILE = 0;
+        HOME = 1;
+        WORK = 2;
+    }
+
+    message PhoneNumber {
+        string number = 1;
+        PhoneType type = 2;
+    }
+    repeated PhoneNumber phone = 2;
+}
+
+message BasicInfo {
+	string name = 1;
+    int32 id = 2;
+    string email = 3;
+}
+
+message AddressBook {
+    repeated Person person = 1;
+}
