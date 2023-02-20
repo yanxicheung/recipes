@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package msg;
+
+message BasicInfo {
+	string name = 1;
+    int32 id = 2;
+    string email = 3;
+}
+
+message BoardInfo {
+	string name = 1;
+    int32 id = 2;
+}
+

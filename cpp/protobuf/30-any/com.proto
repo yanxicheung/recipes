@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com;
+import "google/protobuf/any.proto";
+
+message TestMsg {
+    Head head = 1;
+    google.protobuf.Any body = 2;
+}
+
+message Head {
+    string uri = 1;
+    string token = 2;
+    string err = 3;
+    fixed32 len = 4;
+    fixed32 serial = 5;   
+	fixed64 context = 6; //上下文
+}
