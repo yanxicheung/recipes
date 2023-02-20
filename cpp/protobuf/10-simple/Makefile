@@ -14,7 +14,7 @@ LIB_DIR := $(SHELL_PWD)
 VPATH = $(SRC_DIR)
 
 #目标文件名
-TARGET  := $(BIN_DIR)/simple
+TARGET  := $(BIN_DIR)/a.out
 
 INCPATHS := \
     -I${INC_DIR} \

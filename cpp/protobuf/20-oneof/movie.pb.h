@@ -59,9 +59,9 @@ namespace movie {
 class BasicInfo;
 class BasicInfoDefaultTypeInternal;
 extern BasicInfoDefaultTypeInternal _BasicInfo_default_instance_;
-class Message;
-class MessageDefaultTypeInternal;
-extern MessageDefaultTypeInternal _Message_default_instance_;
+class HelloMessages;
+class HelloMessagesDefaultTypeInternal;
+extern HelloMessagesDefaultTypeInternal _HelloMessages_default_instance_;
 class MovieInfoRequest;
 class MovieInfoRequestDefaultTypeInternal;
 extern MovieInfoRequestDefaultTypeInternal _MovieInfoRequest_default_instance_;
@@ -74,7 +74,7 @@ extern ScoreDefaultTypeInternal _Score_default_instance_;
 }  // namespace movie
 PROTOBUF_NAMESPACE_OPEN
 template<> ::movie::BasicInfo* Arena::CreateMaybeMessage<::movie::BasicInfo>(Arena*);
-template<> ::movie::Message* Arena::CreateMaybeMessage<::movie::Message>(Arena*);
+template<> ::movie::HelloMessages* Arena::CreateMaybeMessage<::movie::HelloMessages>(Arena*);
 template<> ::movie::MovieInfoRequest* Arena::CreateMaybeMessage<::movie::MovieInfoRequest>(Arena*);
 template<> ::movie::MovieInfoResponse* Arena::CreateMaybeMessage<::movie::MovieInfoResponse>(Arena*);
 template<> ::movie::Score* Arena::CreateMaybeMessage<::movie::Score>(Arena*);
@@ -110,23 +110,23 @@ inline bool MovieType_Parse(
 }
 // ===================================================================
 
-class Message PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:movie.Message) */ {
+class HelloMessages PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:movie.HelloMessages) */ {
  public:
-  inline Message() : Message(nullptr) {}
-  virtual ~Message();
+  inline HelloMessages() : HelloMessages(nullptr) {}
+  virtual ~HelloMessages();
 
-  Message(const Message& from);
-  Message(Message&& from) noexcept
-    : Message() {
+  HelloMessages(const HelloMessages& from);
+  HelloMessages(HelloMessages&& from) noexcept
+    : HelloMessages() {
     *this = ::std::move(from);
   }
 
-  inline Message& operator=(const Message& from) {
+  inline HelloMessages& operator=(const HelloMessages& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Message& operator=(Message&& from) noexcept {
+  inline HelloMessages& operator=(HelloMessages&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -144,25 +144,25 @@ class Message PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const Message& default_instance();
+  static const HelloMessages& default_instance();
 
-  enum MessagesCase {
+  enum WorldMessageCase {
     kMovieInfoRequest = 1,
     kMovieInfoResponse = 2,
-    MESSAGES_NOT_SET = 0,
+    WORLDMESSAGE_NOT_SET = 0,
   };
 
-  static inline const Message* internal_default_instance() {
-    return reinterpret_cast<const Message*>(
-               &_Message_default_instance_);
+  static inline const HelloMessages* internal_default_instance() {
+    return reinterpret_cast<const HelloMessages*>(
+               &_HelloMessages_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(Message& a, Message& b) {
+  friend void swap(HelloMessages& a, HelloMessages& b) {
     a.Swap(&b);
   }
-  inline void Swap(Message* other) {
+  inline void Swap(HelloMessages* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -170,7 +170,7 @@ class Message PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Message* other) {
+  void UnsafeArenaSwap(HelloMessages* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -178,17 +178,17 @@ class Message PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline Message* New() const final {
-    return CreateMaybeMessage<Message>(nullptr);
+  inline HelloMessages* New() const final {
+    return CreateMaybeMessage<HelloMessages>(nullptr);
   }
 
-  Message* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Message>(arena);
+  HelloMessages* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<HelloMessages>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Message& from);
-  void MergeFrom(const Message& from);
+  void CopyFrom(const HelloMessages& from);
+  void MergeFrom(const HelloMessages& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -202,13 +202,13 @@ class Message PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Message* other);
+  void InternalSwap(HelloMessages* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "movie.Message";
+    return "movie.HelloMessages";
   }
   protected:
-  explicit Message(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit HelloMessages(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -267,25 +267,25 @@ class Message PROTOBUF_FINAL :
       ::movie::MovieInfoResponse* movie_info_response);
   ::movie::MovieInfoResponse* unsafe_arena_release_movie_info_response();
 
-  void clear_Messages();
-  MessagesCase Messages_case() const;
-  // @@protoc_insertion_point(class_scope:movie.Message)
+  void clear_WorldMessage();
+  WorldMessageCase WorldMessage_case() const;
+  // @@protoc_insertion_point(class_scope:movie.HelloMessages)
  private:
   class _Internal;
   void set_has_movie_info_request();
   void set_has_movie_info_response();
 
-  inline bool has_Messages() const;
-  inline void clear_has_Messages();
+  inline bool has_WorldMessage() const;
+  inline void clear_has_WorldMessage();
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  union MessagesUnion {
-    MessagesUnion() {}
+  union WorldMessageUnion {
+    WorldMessageUnion() {}
     ::movie::MovieInfoRequest* movie_info_request_;
     ::movie::MovieInfoResponse* movie_info_response_;
-  } Messages_;
+  } WorldMessage_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
 
@@ -942,162 +942,162 @@ class MovieInfoResponse PROTOBUF_FINAL :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// Message
+// HelloMessages
 
 // .movie.MovieInfoRequest movie_info_request = 1;
-inline bool Message::_internal_has_movie_info_request() const {
-  return Messages_case() == kMovieInfoRequest;
+inline bool HelloMessages::_internal_has_movie_info_request() const {
+  return WorldMessage_case() == kMovieInfoRequest;
 }
-inline bool Message::has_movie_info_request() const {
+inline bool HelloMessages::has_movie_info_request() const {
   return _internal_has_movie_info_request();
 }
-inline void Message::set_has_movie_info_request() {
+inline void HelloMessages::set_has_movie_info_request() {
   _oneof_case_[0] = kMovieInfoRequest;
 }
-inline void Message::clear_movie_info_request() {
+inline void HelloMessages::clear_movie_info_request() {
   if (_internal_has_movie_info_request()) {
     if (GetArena() == nullptr) {
-      delete Messages_.movie_info_request_;
+      delete WorldMessage_.movie_info_request_;
     }
-    clear_has_Messages();
+    clear_has_WorldMessage();
   }
 }
-inline ::movie::MovieInfoRequest* Message::release_movie_info_request() {
-  // @@protoc_insertion_point(field_release:movie.Message.movie_info_request)
+inline ::movie::MovieInfoRequest* HelloMessages::release_movie_info_request() {
+  // @@protoc_insertion_point(field_release:movie.HelloMessages.movie_info_request)
   if (_internal_has_movie_info_request()) {
-    clear_has_Messages();
-      ::movie::MovieInfoRequest* temp = Messages_.movie_info_request_;
+    clear_has_WorldMessage();
+      ::movie::MovieInfoRequest* temp = WorldMessage_.movie_info_request_;
     if (GetArena() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    Messages_.movie_info_request_ = nullptr;
+    WorldMessage_.movie_info_request_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::movie::MovieInfoRequest& Message::_internal_movie_info_request() const {
+inline const ::movie::MovieInfoRequest& HelloMessages::_internal_movie_info_request() const {
   return _internal_has_movie_info_request()
-      ? *Messages_.movie_info_request_
+      ? *WorldMessage_.movie_info_request_
       : reinterpret_cast< ::movie::MovieInfoRequest&>(::movie::_MovieInfoRequest_default_instance_);
 }
-inline const ::movie::MovieInfoRequest& Message::movie_info_request() const {
-  // @@protoc_insertion_point(field_get:movie.Message.movie_info_request)
+inline const ::movie::MovieInfoRequest& HelloMessages::movie_info_request() const {
+  // @@protoc_insertion_point(field_get:movie.HelloMessages.movie_info_request)
   return _internal_movie_info_request();
 }
-inline ::movie::MovieInfoRequest* Message::unsafe_arena_release_movie_info_request() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:movie.Message.movie_info_request)
+inline ::movie::MovieInfoRequest* HelloMessages::unsafe_arena_release_movie_info_request() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:movie.HelloMessages.movie_info_request)
   if (_internal_has_movie_info_request()) {
-    clear_has_Messages();
-    ::movie::MovieInfoRequest* temp = Messages_.movie_info_request_;
-    Messages_.movie_info_request_ = nullptr;
+    clear_has_WorldMessage();
+    ::movie::MovieInfoRequest* temp = WorldMessage_.movie_info_request_;
+    WorldMessage_.movie_info_request_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void Message::unsafe_arena_set_allocated_movie_info_request(::movie::MovieInfoRequest* movie_info_request) {
-  clear_Messages();
+inline void HelloMessages::unsafe_arena_set_allocated_movie_info_request(::movie::MovieInfoRequest* movie_info_request) {
+  clear_WorldMessage();
   if (movie_info_request) {
     set_has_movie_info_request();
-    Messages_.movie_info_request_ = movie_info_request;
+    WorldMessage_.movie_info_request_ = movie_info_request;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:movie.Message.movie_info_request)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:movie.HelloMessages.movie_info_request)
 }
-inline ::movie::MovieInfoRequest* Message::_internal_mutable_movie_info_request() {
+inline ::movie::MovieInfoRequest* HelloMessages::_internal_mutable_movie_info_request() {
   if (!_internal_has_movie_info_request()) {
-    clear_Messages();
+    clear_WorldMessage();
     set_has_movie_info_request();
-    Messages_.movie_info_request_ = CreateMaybeMessage< ::movie::MovieInfoRequest >(GetArena());
+    WorldMessage_.movie_info_request_ = CreateMaybeMessage< ::movie::MovieInfoRequest >(GetArena());
   }
-  return Messages_.movie_info_request_;
+  return WorldMessage_.movie_info_request_;
 }
-inline ::movie::MovieInfoRequest* Message::mutable_movie_info_request() {
-  // @@protoc_insertion_point(field_mutable:movie.Message.movie_info_request)
+inline ::movie::MovieInfoRequest* HelloMessages::mutable_movie_info_request() {
+  // @@protoc_insertion_point(field_mutable:movie.HelloMessages.movie_info_request)
   return _internal_mutable_movie_info_request();
 }
 
 // .movie.MovieInfoResponse movie_info_response = 2;
-inline bool Message::_internal_has_movie_info_response() const {
-  return Messages_case() == kMovieInfoResponse;
+inline bool HelloMessages::_internal_has_movie_info_response() const {
+  return WorldMessage_case() == kMovieInfoResponse;
 }
-inline bool Message::has_movie_info_response() const {
+inline bool HelloMessages::has_movie_info_response() const {
   return _internal_has_movie_info_response();
 }
-inline void Message::set_has_movie_info_response() {
+inline void HelloMessages::set_has_movie_info_response() {
   _oneof_case_[0] = kMovieInfoResponse;
 }
-inline void Message::clear_movie_info_response() {
+inline void HelloMessages::clear_movie_info_response() {
   if (_internal_has_movie_info_response()) {
     if (GetArena() == nullptr) {
-      delete Messages_.movie_info_response_;
+      delete WorldMessage_.movie_info_response_;
     }
-    clear_has_Messages();
+    clear_has_WorldMessage();
   }
 }
-inline ::movie::MovieInfoResponse* Message::release_movie_info_response() {
-  // @@protoc_insertion_point(field_release:movie.Message.movie_info_response)
+inline ::movie::MovieInfoResponse* HelloMessages::release_movie_info_response() {
+  // @@protoc_insertion_point(field_release:movie.HelloMessages.movie_info_response)
   if (_internal_has_movie_info_response()) {
-    clear_has_Messages();
-      ::movie::MovieInfoResponse* temp = Messages_.movie_info_response_;
+    clear_has_WorldMessage();
+      ::movie::MovieInfoResponse* temp = WorldMessage_.movie_info_response_;
     if (GetArena() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    Messages_.movie_info_response_ = nullptr;
+    WorldMessage_.movie_info_response_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::movie::MovieInfoResponse& Message::_internal_movie_info_response() const {
+inline const ::movie::MovieInfoResponse& HelloMessages::_internal_movie_info_response() const {
   return _internal_has_movie_info_response()
-      ? *Messages_.movie_info_response_
+      ? *WorldMessage_.movie_info_response_
       : reinterpret_cast< ::movie::MovieInfoResponse&>(::movie::_MovieInfoResponse_default_instance_);
 }
-inline const ::movie::MovieInfoResponse& Message::movie_info_response() const {
-  // @@protoc_insertion_point(field_get:movie.Message.movie_info_response)
+inline const ::movie::MovieInfoResponse& HelloMessages::movie_info_response() const {
+  // @@protoc_insertion_point(field_get:movie.HelloMessages.movie_info_response)
   return _internal_movie_info_response();
 }
-inline ::movie::MovieInfoResponse* Message::unsafe_arena_release_movie_info_response() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:movie.Message.movie_info_response)
+inline ::movie::MovieInfoResponse* HelloMessages::unsafe_arena_release_movie_info_response() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:movie.HelloMessages.movie_info_response)
   if (_internal_has_movie_info_response()) {
-    clear_has_Messages();
-    ::movie::MovieInfoResponse* temp = Messages_.movie_info_response_;
-    Messages_.movie_info_response_ = nullptr;
+    clear_has_WorldMessage();
+    ::movie::MovieInfoResponse* temp = WorldMessage_.movie_info_response_;
+    WorldMessage_.movie_info_response_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void Message::unsafe_arena_set_allocated_movie_info_response(::movie::MovieInfoResponse* movie_info_response) {
-  clear_Messages();
+inline void HelloMessages::unsafe_arena_set_allocated_movie_info_response(::movie::MovieInfoResponse* movie_info_response) {
+  clear_WorldMessage();
   if (movie_info_response) {
     set_has_movie_info_response();
-    Messages_.movie_info_response_ = movie_info_response;
+    WorldMessage_.movie_info_response_ = movie_info_response;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:movie.Message.movie_info_response)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:movie.HelloMessages.movie_info_response)
 }
-inline ::movie::MovieInfoResponse* Message::_internal_mutable_movie_info_response() {
+inline ::movie::MovieInfoResponse* HelloMessages::_internal_mutable_movie_info_response() {
   if (!_internal_has_movie_info_response()) {
-    clear_Messages();
+    clear_WorldMessage();
     set_has_movie_info_response();
-    Messages_.movie_info_response_ = CreateMaybeMessage< ::movie::MovieInfoResponse >(GetArena());
+    WorldMessage_.movie_info_response_ = CreateMaybeMessage< ::movie::MovieInfoResponse >(GetArena());
   }
-  return Messages_.movie_info_response_;
+  return WorldMessage_.movie_info_response_;
 }
-inline ::movie::MovieInfoResponse* Message::mutable_movie_info_response() {
-  // @@protoc_insertion_point(field_mutable:movie.Message.movie_info_response)
+inline ::movie::MovieInfoResponse* HelloMessages::mutable_movie_info_response() {
+  // @@protoc_insertion_point(field_mutable:movie.HelloMessages.movie_info_response)
   return _internal_mutable_movie_info_response();
 }
 
-inline bool Message::has_Messages() const {
-  return Messages_case() != MESSAGES_NOT_SET;
+inline bool HelloMessages::has_WorldMessage() const {
+  return WorldMessage_case() != WORLDMESSAGE_NOT_SET;
 }
-inline void Message::clear_has_Messages() {
-  _oneof_case_[0] = MESSAGES_NOT_SET;
+inline void HelloMessages::clear_has_WorldMessage() {
+  _oneof_case_[0] = WORLDMESSAGE_NOT_SET;
 }
-inline Message::MessagesCase Message::Messages_case() const {
-  return Message::MessagesCase(_oneof_case_[0]);
+inline HelloMessages::WorldMessageCase HelloMessages::WorldMessage_case() const {
+  return HelloMessages::WorldMessageCase(_oneof_case_[0]);
 }
 // -------------------------------------------------------------------
 

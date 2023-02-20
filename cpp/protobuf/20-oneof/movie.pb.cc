@@ -19,10 +19,10 @@ extern PROTOBUF_INTERNAL_EXPORT_movie_2eproto ::PROTOBUF_NAMESPACE_ID::internal:
 extern PROTOBUF_INTERNAL_EXPORT_movie_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_MovieInfoResponse_movie_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_movie_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Score_movie_2eproto;
 namespace movie {
-class MessageDefaultTypeInternal {
+class HelloMessagesDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Message> _instance;
-} _Message_default_instance_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<HelloMessages> _instance;
+} _HelloMessages_default_instance_;
 class ScoreDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Score> _instance;
@@ -53,18 +53,18 @@ static void InitDefaultsscc_info_BasicInfo_movie_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BasicInfo_movie_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_BasicInfo_movie_2eproto}, {}};
 
-static void InitDefaultsscc_info_Message_movie_2eproto() {
+static void InitDefaultsscc_info_HelloMessages_movie_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::movie::_Message_default_instance_;
-    new (ptr) ::movie::Message();
+    void* ptr = &::movie::_HelloMessages_default_instance_;
+    new (ptr) ::movie::HelloMessages();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Message_movie_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_Message_movie_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_HelloMessages_movie_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_HelloMessages_movie_2eproto}, {
       &scc_info_MovieInfoRequest_movie_2eproto.base,
       &scc_info_MovieInfoResponse_movie_2eproto.base,}};
 
@@ -115,13 +115,13 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_movie_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::movie::Message, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::movie::HelloMessages, _internal_metadata_),
   ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::movie::Message, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::movie::HelloMessages, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::movie::Message, Messages_),
+  PROTOBUF_FIELD_OFFSET(::movie::HelloMessages, WorldMessage_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::movie::Score, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -152,7 +152,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_movie_2eproto::offsets[] PROTO
   PROTOBUF_FIELD_OFFSET(::movie::MovieInfoResponse, score_items_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::movie::Message)},
+  { 0, -1, sizeof(::movie::HelloMessages)},
   { 8, -1, sizeof(::movie::Score)},
   { 15, -1, sizeof(::movie::BasicInfo)},
   { 22, -1, sizeof(::movie::MovieInfoRequest)},
@@ -160,7 +160,7 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::movie::_Message_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::movie::_HelloMessages_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::movie::_Score_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::movie::_BasicInfo_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::movie::_MovieInfoRequest_default_instance_),
@@ -168,31 +168,32 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_movie_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\013movie.proto\022\005movie\"\205\001\n\007Message\0225\n\022movi"
-  "e_info_request\030\001 \001(\0132\027.movie.MovieInfoRe"
-  "questH\000\0227\n\023movie_info_response\030\002 \001(\0132\030.m"
-  "ovie.MovieInfoResponseH\000B\n\n\010Messages\"\'\n\005"
-  "Score\022\r\n\005value\030\001 \001(\005\022\017\n\007comment\030\002 \001(\t\"D\n"
-  "\tBasicInfo\022$\n\nmovie_type\030\001 \001(\0162\020.movie.M"
-  "ovieType\022\021\n\tdirectors\030\002 \003(\t\" \n\020MovieInfo"
-  "Request\022\014\n\004name\030\001 \001(\t\"j\n\021MovieInfoRespon"
-  "se\022\014\n\004name\030\001 \001(\t\022$\n\nbasic_info\030\002 \001(\0132\020.m"
-  "ovie.BasicInfo\022!\n\013score_items\030\003 \003(\0132\014.mo"
-  "vie.Score*8\n\tMovieType\022\t\n\005humor\020\000\022\013\n\007sci"
-  "ence\020\001\022\010\n\004love\020\002\022\t\n\005other\020\003b\006proto3"
+  "\n\013movie.proto\022\005movie\"\217\001\n\rHelloMessages\0225"
+  "\n\022movie_info_request\030\001 \001(\0132\027.movie.Movie"
+  "InfoRequestH\000\0227\n\023movie_info_response\030\002 \001"
+  "(\0132\030.movie.MovieInfoResponseH\000B\016\n\014WorldM"
+  "essage\"\'\n\005Score\022\r\n\005value\030\001 \001(\005\022\017\n\007commen"
+  "t\030\002 \001(\t\"D\n\tBasicInfo\022$\n\nmovie_type\030\001 \001(\016"
+  "2\020.movie.MovieType\022\021\n\tdirectors\030\002 \003(\t\" \n"
+  "\020MovieInfoRequest\022\014\n\004name\030\001 \001(\t\"j\n\021Movie"
+  "InfoResponse\022\014\n\004name\030\001 \001(\t\022$\n\nbasic_info"
+  "\030\002 \001(\0132\020.movie.BasicInfo\022!\n\013score_items\030"
+  "\003 \003(\0132\014.movie.Score*8\n\tMovieType\022\t\n\005humo"
+  "r\020\000\022\013\n\007science\020\001\022\010\n\004love\020\002\022\t\n\005other\020\003b\006p"
+  "roto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_movie_2eproto_deps[1] = {
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_movie_2eproto_sccs[5] = {
   &scc_info_BasicInfo_movie_2eproto.base,
-  &scc_info_Message_movie_2eproto.base,
+  &scc_info_HelloMessages_movie_2eproto.base,
   &scc_info_MovieInfoRequest_movie_2eproto.base,
   &scc_info_MovieInfoResponse_movie_2eproto.base,
   &scc_info_Score_movie_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_movie_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_movie_2eproto = {
-  false, false, descriptor_table_protodef_movie_2eproto, "movie.proto", 475,
+  false, false, descriptor_table_protodef_movie_2eproto, "movie.proto", 485,
   &descriptor_table_movie_2eproto_once, descriptor_table_movie_2eproto_sccs, descriptor_table_movie_2eproto_deps, 5, 0,
   schemas, file_default_instances, TableStruct_movie_2eproto::offsets,
   file_level_metadata_movie_2eproto, 5, file_level_enum_descriptors_movie_2eproto, file_level_service_descriptors_movie_2eproto,
@@ -220,23 +221,23 @@ bool MovieType_IsValid(int value) {
 
 // ===================================================================
 
-class Message::_Internal {
+class HelloMessages::_Internal {
  public:
-  static const ::movie::MovieInfoRequest& movie_info_request(const Message* msg);
-  static const ::movie::MovieInfoResponse& movie_info_response(const Message* msg);
+  static const ::movie::MovieInfoRequest& movie_info_request(const HelloMessages* msg);
+  static const ::movie::MovieInfoResponse& movie_info_response(const HelloMessages* msg);
 };
 
 const ::movie::MovieInfoRequest&
-Message::_Internal::movie_info_request(const Message* msg) {
-  return *msg->Messages_.movie_info_request_;
+HelloMessages::_Internal::movie_info_request(const HelloMessages* msg) {
+  return *msg->WorldMessage_.movie_info_request_;
 }
 const ::movie::MovieInfoResponse&
-Message::_Internal::movie_info_response(const Message* msg) {
-  return *msg->Messages_.movie_info_response_;
+HelloMessages::_Internal::movie_info_response(const HelloMessages* msg) {
+  return *msg->WorldMessage_.movie_info_response_;
 }
-void Message::set_allocated_movie_info_request(::movie::MovieInfoRequest* movie_info_request) {
+void HelloMessages::set_allocated_movie_info_request(::movie::MovieInfoRequest* movie_info_request) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
-  clear_Messages();
+  clear_WorldMessage();
   if (movie_info_request) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
       ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(movie_info_request);
@@ -245,13 +246,13 @@ void Message::set_allocated_movie_info_request(::movie::MovieInfoRequest* movie_
           message_arena, movie_info_request, submessage_arena);
     }
     set_has_movie_info_request();
-    Messages_.movie_info_request_ = movie_info_request;
+    WorldMessage_.movie_info_request_ = movie_info_request;
   }
-  // @@protoc_insertion_point(field_set_allocated:movie.Message.movie_info_request)
+  // @@protoc_insertion_point(field_set_allocated:movie.HelloMessages.movie_info_request)
 }
-void Message::set_allocated_movie_info_response(::movie::MovieInfoResponse* movie_info_response) {
+void HelloMessages::set_allocated_movie_info_response(::movie::MovieInfoResponse* movie_info_response) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
-  clear_Messages();
+  clear_WorldMessage();
   if (movie_info_response) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
       ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(movie_info_response);
@@ -260,21 +261,21 @@ void Message::set_allocated_movie_info_response(::movie::MovieInfoResponse* movi
           message_arena, movie_info_response, submessage_arena);
     }
     set_has_movie_info_response();
-    Messages_.movie_info_response_ = movie_info_response;
+    WorldMessage_.movie_info_response_ = movie_info_response;
   }
-  // @@protoc_insertion_point(field_set_allocated:movie.Message.movie_info_response)
+  // @@protoc_insertion_point(field_set_allocated:movie.HelloMessages.movie_info_response)
 }
-Message::Message(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+HelloMessages::HelloMessages(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:movie.Message)
+  // @@protoc_insertion_point(arena_constructor:movie.HelloMessages)
 }
-Message::Message(const Message& from)
+HelloMessages::HelloMessages(const HelloMessages& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  clear_has_Messages();
-  switch (from.Messages_case()) {
+  clear_has_WorldMessage();
+  switch (from.WorldMessage_case()) {
     case kMovieInfoRequest: {
       _internal_mutable_movie_info_request()->::movie::MovieInfoRequest::MergeFrom(from._internal_movie_info_request());
       break;
@@ -283,80 +284,80 @@ Message::Message(const Message& from)
       _internal_mutable_movie_info_response()->::movie::MovieInfoResponse::MergeFrom(from._internal_movie_info_response());
       break;
     }
-    case MESSAGES_NOT_SET: {
+    case WORLDMESSAGE_NOT_SET: {
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:movie.Message)
+  // @@protoc_insertion_point(copy_constructor:movie.HelloMessages)
 }
 
-void Message::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Message_movie_2eproto.base);
-  clear_has_Messages();
+void HelloMessages::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_HelloMessages_movie_2eproto.base);
+  clear_has_WorldMessage();
 }
 
-Message::~Message() {
-  // @@protoc_insertion_point(destructor:movie.Message)
+HelloMessages::~HelloMessages() {
+  // @@protoc_insertion_point(destructor:movie.HelloMessages)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void Message::SharedDtor() {
+void HelloMessages::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  if (has_Messages()) {
-    clear_Messages();
+  if (has_WorldMessage()) {
+    clear_WorldMessage();
   }
 }
 
-void Message::ArenaDtor(void* object) {
-  Message* _this = reinterpret_cast< Message* >(object);
+void HelloMessages::ArenaDtor(void* object) {
+  HelloMessages* _this = reinterpret_cast< HelloMessages* >(object);
   (void)_this;
 }
-void Message::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void HelloMessages::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void Message::SetCachedSize(int size) const {
+void HelloMessages::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const Message& Message::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Message_movie_2eproto.base);
+const HelloMessages& HelloMessages::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_HelloMessages_movie_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void Message::clear_Messages() {
-// @@protoc_insertion_point(one_of_clear_start:movie.Message)
-  switch (Messages_case()) {
+void HelloMessages::clear_WorldMessage() {
+// @@protoc_insertion_point(one_of_clear_start:movie.HelloMessages)
+  switch (WorldMessage_case()) {
     case kMovieInfoRequest: {
       if (GetArena() == nullptr) {
-        delete Messages_.movie_info_request_;
+        delete WorldMessage_.movie_info_request_;
       }
       break;
     }
     case kMovieInfoResponse: {
       if (GetArena() == nullptr) {
-        delete Messages_.movie_info_response_;
+        delete WorldMessage_.movie_info_response_;
       }
       break;
     }
-    case MESSAGES_NOT_SET: {
+    case WORLDMESSAGE_NOT_SET: {
       break;
     }
   }
-  _oneof_case_[0] = MESSAGES_NOT_SET;
+  _oneof_case_[0] = WORLDMESSAGE_NOT_SET;
 }
 
 
-void Message::Clear() {
-// @@protoc_insertion_point(message_clear_start:movie.Message)
+void HelloMessages::Clear() {
+// @@protoc_insertion_point(message_clear_start:movie.HelloMessages)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  clear_Messages();
+  clear_WorldMessage();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Message::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* HelloMessages::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
@@ -400,9 +401,9 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Message::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* HelloMessages::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:movie.Message)
+  // @@protoc_insertion_point(serialize_to_array_start:movie.HelloMessages)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -426,34 +427,34 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:movie.Message)
+  // @@protoc_insertion_point(serialize_to_array_end:movie.HelloMessages)
   return target;
 }
 
-size_t Message::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:movie.Message)
+size_t HelloMessages::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:movie.HelloMessages)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  switch (Messages_case()) {
+  switch (WorldMessage_case()) {
     // .movie.MovieInfoRequest movie_info_request = 1;
     case kMovieInfoRequest: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *Messages_.movie_info_request_);
+          *WorldMessage_.movie_info_request_);
       break;
     }
     // .movie.MovieInfoResponse movie_info_response = 2;
     case kMovieInfoResponse: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *Messages_.movie_info_response_);
+          *WorldMessage_.movie_info_response_);
       break;
     }
-    case MESSAGES_NOT_SET: {
+    case WORLDMESSAGE_NOT_SET: {
       break;
     }
   }
@@ -466,29 +467,29 @@ size_t Message::ByteSizeLong() const {
   return total_size;
 }
 
-void Message::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:movie.Message)
+void HelloMessages::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:movie.HelloMessages)
   GOOGLE_DCHECK_NE(&from, this);
-  const Message* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Message>(
+  const HelloMessages* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<HelloMessages>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:movie.Message)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:movie.HelloMessages)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:movie.Message)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:movie.HelloMessages)
     MergeFrom(*source);
   }
 }
 
-void Message::MergeFrom(const Message& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:movie.Message)
+void HelloMessages::MergeFrom(const HelloMessages& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:movie.HelloMessages)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  switch (from.Messages_case()) {
+  switch (from.WorldMessage_case()) {
     case kMovieInfoRequest: {
       _internal_mutable_movie_info_request()->::movie::MovieInfoRequest::MergeFrom(from._internal_movie_info_request());
       break;
@@ -497,38 +498,38 @@ void Message::MergeFrom(const Message& from) {
       _internal_mutable_movie_info_response()->::movie::MovieInfoResponse::MergeFrom(from._internal_movie_info_response());
       break;
     }
-    case MESSAGES_NOT_SET: {
+    case WORLDMESSAGE_NOT_SET: {
       break;
     }
   }
 }
 
-void Message::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:movie.Message)
+void HelloMessages::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:movie.HelloMessages)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void Message::CopyFrom(const Message& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:movie.Message)
+void HelloMessages::CopyFrom(const HelloMessages& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:movie.HelloMessages)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool Message::IsInitialized() const {
+bool HelloMessages::IsInitialized() const {
   return true;
 }
 
-void Message::InternalSwap(Message* other) {
+void HelloMessages::InternalSwap(HelloMessages* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(Messages_, other->Messages_);
+  swap(WorldMessage_, other->WorldMessage_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Message::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata HelloMessages::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -1492,8 +1493,8 @@ void MovieInfoResponse::InternalSwap(MovieInfoResponse* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace movie
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::movie::Message* Arena::CreateMaybeMessage< ::movie::Message >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::movie::Message >(arena);
+template<> PROTOBUF_NOINLINE ::movie::HelloMessages* Arena::CreateMaybeMessage< ::movie::HelloMessages >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::movie::HelloMessages >(arena);
 }
 template<> PROTOBUF_NOINLINE ::movie::Score* Arena::CreateMaybeMessage< ::movie::Score >(Arena* arena) {
   return Arena::CreateMessageInternal< ::movie::Score >(arena);

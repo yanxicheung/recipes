@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package movie;
 
-message Message
+message HelloMessages
 {
-    oneof Messages
+    oneof WorldMessage
     {
          MovieInfoRequest  movie_info_request  = 1;
          MovieInfoResponse movie_info_response = 2;

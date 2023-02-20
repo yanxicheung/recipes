@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <assert.h>
 using namespace std;
 using namespace daniel::tutorial;
 
@@ -67,6 +68,7 @@ void fileCodec(const AddressBook& book)
 	for (int i = 0; i < book1.person_size(); ++i)
 	{
 		const Person& person = book1.person(i);
+		assert(person.has_basicinfo() == true);
 		const BasicInfo& basicInfo = person.basicinfo();
 		cout << "id " << basicInfo.id() << endl;
 		cout << "email " << basicInfo.email() << endl;
@@ -93,6 +95,7 @@ void stringCodec(const AddressBook& book)
 	for (int i = 0; i < book1.person_size(); ++i)
 	{
 		const Person& person = book1.person(i);
+		assert(person.has_basicinfo() == true);
 		const BasicInfo& basicInfo = person.basicinfo();
 		cout << "id " << basicInfo.id() << endl;
 		cout << "email " << basicInfo.email() << endl;
