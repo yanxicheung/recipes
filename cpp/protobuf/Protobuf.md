@@ -81,6 +81,12 @@ protoc --proto_path=IMPORT_PATH --cpp_out=DST_DIR --java_out=DST_DIR --python_ou
 
 ### oneof
 
+protobuf中的oneof类似与C++中的联合体类型相似，所有的字段共享内存，最多只能同时设置一个字段。
+
+
+
+设置oneof的任何字段会自动清除所有其他字段，可以使用case()或WhichOneof()方法检查oneof中使用的是哪个字段。
+
 
 
 ### any
